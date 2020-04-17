@@ -1,0 +1,666 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+}
+
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    font-family: "HelveticaNeueCyr";
+}
+
+@font-face {
+    font-family: "SuedtirolPro-Regular";
+    src: url("../fonts/SuedtirolPro-Regular/SuedtirolPro-Regular.eot");
+    src: local("☺"), url("../fonts/SuedtirolPro-Regular/SuedtirolPro-Regular.woff") format("woff"), url("../fonts/SuedtirolPro-Regular/SuedtirolPro-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Raleway-Medium";
+    src: url("../fonts/Raleway-Medium/Raleway-Medium.eot");
+    src: local("☺"), url("../fonts/Raleway-Medium/Raleway-Medium.woff") format("woff"), url("../fonts/Raleway-Medium/Raleway-Medium.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "HelveticaNeueCyr";
+    src: url("../fonts/HelveticaNeueCyr-Black/HelveticaNeueCyr-Black.eot");
+    src: local("☺"), url("../fonts/HelveticaNeueCyr-Black/HelveticaNeueCyr-Black.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Black/HelveticaNeueCyr-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "HelveticaNeueCyr";
+    src: url("../fonts/HelveticaNeueCyr-Light/HelveticaNeueCyr-Light.eot");
+    src: local("☺"), url("../fonts/HelveticaNeueCyr-Light/HelveticaNeueCyr-Light.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Light/HelveticaNeueCyr-Light.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "HelveticaNeueCyr";
+    src: url("../fonts/HelveticaNeueCyr-Medium/HelveticaNeueCyr-Medium.eot");
+    src: local("☺"), url("../fonts/HelveticaNeueCyr-Medium/HelveticaNeueCyr-Medium.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Medium/HelveticaNeueCyr-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@media (min-width: 1200px) {
+    .drum {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+}
+
+.drum-item:first-child {
+    text-align: center;
+}
+
+.drum-item:first-child .drum-img {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 280px;
+}
+
+@media (min-width: 768px) {
+    .drum-item:first-child .drum-img {
+        width: 400px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .drum-item:first-child .drum-img {
+        width: unset;
+    }
+}
+
+.drum-item:first-child .drum-img img {
+    width: 100%;
+    height: auto;
+}
+
+.drum-item:first-child .drum-img:after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 64px;
+    background: url("../img/drum-arrow.png") no-repeat center;
+    background-size: contain;
+}
+
+@media (min-width: 768px) {
+    .drum-item:first-child .drum-img:after {
+        right: -7px;
+        width: 56px;
+    }
+}
+
+.drum-arrow {
+    position: absolute;
+    right: 0;
+}
+
+#drum {
+    max-width: 838px;
+    width: 100%;
+    transition: 7s ease-in-out;
+}
+
+.stock {
+    text-align: center;
+}
+
+.stock-title {
+    font-family: "SuedtirolPro-Regular";
+}
+
+.stock-title p {
+    font-size: 30px;
+    color: #545454;
+}
+
+@media (min-width: 1200px) {
+    .stock-title p {
+        font-size: 40px;
+    }
+}
+
+.stock-title b {
+    font-size: 44px;
+    color: #D1111D;
+}
+
+@media (min-width: 1200px) {
+    .stock-title b {
+        font-size: 68px;
+    }
+}
+
+.ya-share2__container {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.stock-discont p {
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 32px;
+    color: #545454;
+}
+
+@media (min-width: 1200px) {
+    .stock-discont p {
+        font-size: 24px;
+        line-height: 46px;
+    }
+}
+
+.discont-about {
+    font-family: "SuedtirolPro-Regular";
+    font-size: 24px;
+    text-align: center;
+    color: #545454;
+    font-size: 32px;
+    line-height: 38px;
+}
+
+.drum-result {
+    font-weight: 900;
+    font-size: 35px;
+    color: #E6323E;
+}
+
+.promo {
+    color: #E6323E;
+    font-weight: 500;
+}
+
+.stock-discont .about-promo {
+    font-size: 19px;
+    font-weight: 400;
+    color: #009C2C;
+}
+
+.drum-btn {
+    font-family: "Raleway-Medium";
+    text-align: center;
+    line-height: 90px;
+    font-size: 28px;
+    width: 300px;
+    height: 90px;
+    border: none;
+    margin: 15px auto 25px;
+    background: #FFDD2D;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .drum-btn {
+        width: 400px;
+    }
+}
+
+.drum-btn:hover {
+    background: #E9C717;
+}
+
+.drum-btn:after {
+    content: "";
+    position: absolute;
+    left: -128px;
+    top: 10px;
+    background: url("../img/share.png") no-repeat center;
+    width: 86px;
+    height: 86px;
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .drum-btn:after {
+        display: block;
+    }
+}
+
+.order-btn {
+    font-family: "Raleway-Medium";
+    font-size: 16px;
+    height: 50px;
+    padding: 0 10px;
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 50px;
+    background: #FF9043;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .order-btn {
+        font-size: 28px;
+        padding: 0 40px;
+        height: 90px;
+        line-height: 90px;
+    }
+}
+
+.video_pirogi {
+    margin: auto;
+}
+
+/* Внутренняя старница ====================================================== */
+.lSSlideOuter {
+    padding-right: 0 !important;
+}
+
+.product-slider {
+    max-width: 927px;
+    width: 100%;
+}
+
+@media(min-width: 992px) {
+    .product-slider {
+        margin-bottom: 25px;
+    }
+
+    .lSSlideOuter {
+        padding-left: 150px !important;
+    }
+}
+
+@media(min-width: 1280px) {
+    .product-slider {
+        margin: 0 auto 25px;
+    }
+}
+
+.product-slider img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media(max-width: 991px) {
+    .product-slider {
+        max-width: 740px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.breadcrumbs {
+    padding: 25px 24px 40px;
+}
+
+@media(max-width: 1024px) {
+    .breadcrumbs {
+        padding: 100px 24px 15px;
+    }
+}
+
+.product-block {
+    padding: 0 30px;
+}
+
+@media(max-width: 1024px) {
+    .product-block {
+        padding: 0 15px;
+    }
+}
+
+.breadcrumbs ul {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.breadcrumbs a, .breadcrumbs span {
+    color: #FF6900;
+    font-size: 16px;
+    position: relative;
+}
+
+.breadcrumbs span {
+    padding-left: 18px;
+}
+
+.breadcrumbs ul li {
+    margin-bottom: 10px;
+}
+
+.breadcrumbs ul li:not(:last-child) {
+    margin-right: 15px;
+}
+
+.product-title {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    color: #FF6900;
+    margin-bottom: 25px;
+    line-height: 28px;
+}
+
+.product-title span {
+    display: inline-block;
+    color: white;
+    background: #55BB00;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 12px;
+    text-transform: none;
+}
+
+@media(min-width: 768px) {
+    .product-title {
+        font-size: 22px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .product-title {
+        font-size: 26px;
+    }
+}
+
+@media(min-width: 1600px) {
+    .product-title {
+        font-size: 32px;
+    }
+}
+
+.payment {
+    color: #9C9A9A;
+    font-size: 16px;
+    padding: 15px 0px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.payment li:first-child {
+    margin-right: 5px;
+}
+
+.product-block__item_last {
+    padding-top: 20px;
+}
+
+@media(min-width: 992px) {
+    .product-block__item_last {
+        width: 500px;
+        padding-top: 0;
+    }
+}
+
+@media(min-width: 1366px) {
+    .product-block__item_last {
+        width: 900px;
+        display: flex;
+    }
+
+    .product-block__item_last .product-block__box:first-child {
+        width: 65%;
+    }
+
+    .product-block__item_last .product-block__box:last-child {
+        width: 35%;
+    }
+}
+
+@media(min-width: 1600px) {
+    .product-block__item_last {
+        width: 300px;
+        display: block;
+        padding-left: 20px;
+    }
+
+    .product-block__item_last .product-block__box:first-child {
+        width: auto;
+    }
+
+    .product-block__item_last .product-block__box:last-child {
+        width: auto;
+    }
+}
+
+@media(min-width: 1900px) {
+    .product-block__item_last {
+        width: 520px;
+    }
+}
+
+.payment li:last-child img:not(:last-child) {
+    margin-right: 5px;
+}
+
+@media(min-width: 768px) {
+    .payment li:first-child {
+        margin-right: 25px;
+    }
+
+    .payment li:last-child img:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    .payment li:last-child {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.payment li {
+    margin-bottom: 10px;
+}
+
+.composition-title {
+    color: #373F48;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.composition-list span {
+    position: relative;
+    font-size: 16px;
+    padding: 7px 0px 7px 33px;
+    display: inline-block;
+}
+
+.composition-list a {
+    color: #FF6900;
+}
+
+.flour-icon {
+    background: url('../image/flour.png') no-repeat left center;
+}
+
+.egg-icon {
+    background: url('../image/egg.png') no-repeat left center;
+}
+
+.milk-icon {
+    background: url('../image/milk.png') no-repeat left center;
+}
+
+.water-icon {
+    background: url('../image/water.png') no-repeat left center;
+}
+
+.yeast-icon {
+    background: url('../image/taste.png') no-repeat left center;
+}
+
+.oilveg-icon {
+    background: url('../image/dippel-oil.png') no-repeat left center;
+}
+
+.butter-icon {
+    background: url('../image/butter.png') no-repeat left center;
+}
+
+.salt-icon {
+    background: url('../image/salt.png') no-repeat left center;
+}
+
+.sugar-icon {
+    background: url('../image/sugar.png') no-repeat left center;
+}
+
+.meat-icon {
+    background: url('../image/meat.png') no-repeat left center;
+}
+
+.garlic-icon {
+    background: url('../image/onion.png') no-repeat left center;
+}
+
+.paprica-icon {
+    background: url('../image/paprica.png') no-repeat left center;
+}
+
+.cheese-icon {
+    background: url('../image/cheese.png') no-repeat left center;
+}
+
+.composition-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 25px;
+}
+
+.product__item_inner {
+    padding: 25px 0 0;
+    border: none;
+}
+
+@media(min-width: 768px) {
+    .product__item_inner {
+        padding-top: 0;
+    }
+}
+
+@media(max-width: 991px) {
+    .product__item_inner {
+        order: 1;
+    }
+
+    .product-block__item_cooking {
+        order: 2;
+    }
+}
+
+.product__item_inner .product__weight-item {
+    padding-left: 15px;
+}
+
+.composition-list li {
+    margin-right: 12px;
+}
+
+.time-coocing-list li {
+    max-width: 292px;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+    .time-coocing-list {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .time-coocing {
+        text-align: center;
+    }
+}
+
+.product-article {
+    font-size: 16px;
+    color: #373535;
+    padding: 10px 0px 36px;
+}
+
+.time-coocing__title {
+    font-weight: bold;
+    margin-bottom: 12px;
+    font-size: 18px;
+    color: #F94848;
+}
+
+.time-coocing-list li p {
+    font-size: 18px;
+    font-weight: 600;
+    width: 190px;
+    margin: 0 auto;
+    padding-top: 5px;
+}
+
+.time-coocing-list li:first-child {
+    border: 2px solid #FFCC33;
+}
+
+.time-coocing-list li:last-child {
+    border: 2px solid #FF5364;
+}
+
+.time-coocing-list li:last-child p {
+    color: #E52836;
+}
+
+/*.product-block__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}*/
+@media(min-width: 768px) {
+    .product-block__inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+}
+
+@media(min-width: 1280px) {
+    .product-block__item_first {
+        width: 100%;
+    }
+}
+
+@media(min-width: 1600px) {
+    .product-block__item_first {
+        width: auto;
+    }
+}
